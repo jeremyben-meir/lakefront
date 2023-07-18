@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from './navbar.module.css'
 import Image from 'next/image'
-import logoImage from './logo.png'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -27,8 +26,8 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="Lakefront Escapes NY logo"
-            width={100}
-            height={100}
+            width={95}
+            height={50}
           />
         </Link>
       </div>
