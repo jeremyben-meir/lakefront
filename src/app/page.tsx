@@ -1,12 +1,17 @@
-import Image from 'next/image'
 import styles from './page.module.css'
-import Navbar from './navbar'
-import Footer from './footer'
+import Footer from './(bars)/footer'
+import Header from './(app_components)/header'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div style={{ width: "20px" }} />
+      <div className={styles.headerContainer} >
+        <div style={{ minHeight:"75px", width:"100%"}} />
+        <div className={styles.videoContainer} >
+          <Header/>
+        </div>
+      </div>
+      
       <Footer/>
     </main>
   )

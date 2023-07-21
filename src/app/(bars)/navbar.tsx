@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import styles from './navbar.module.css'
+import styles from './bars.module.css'
 import Image from 'next/image'
 
 export default function Navbar() {

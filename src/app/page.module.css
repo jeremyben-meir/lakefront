@@ -6,6 +6,23 @@
   min-height: 100vh;
 }
 
+.headerContainer {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  flex-direction: column;
+  /* border:10px solid blue; */
+}
+
+.videoContainer {
+  display: flex;
+  flex: 1;
+  min-width: 100%;
+  padding:10px;
+  /* border:10px solid red; */
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

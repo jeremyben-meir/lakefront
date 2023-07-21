@@ -1,5 +1,5 @@
 import React from "react"
-import styles from './navbar.module.css'
+import styles from './bars.module.css'
 import Image from 'next/image'
 
 export default function Footer () {
@@ -10,7 +10,7 @@ export default function Footer () {
           className={styles.imageStyle}
           width={20}
           height={20}
-          src={"/footer/phone-call-white.png"}
+          src={"/footer/phone.png"}
           alt="phone"
         />
         +1 (518) 929-4623
@@ -18,17 +18,17 @@ export default function Footer () {
       <div className={styles.footerSubstyleRight}>
         <Image
           className={styles.imageStyle}
-          width={20}
-          height={20}
-          src={"/footer/instagram-white.png"}
+          width={25}
+          height={25}
+          src={"/footer/instagram.png"}
           alt="insta"
         />
         <Image
           className={styles.imageStyle}
-          width={20}
-          height={20}
-          src={"/footer/email.png"}
-          alt="insta"
+          width={25}
+          height={25}
+          src={"/footer/email-white.png"}
+          alt="email"
         />
       </div>
     </div>

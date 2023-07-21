@@ -1,4 +1,4 @@
-import Navbar from './navbar'
+import Navbar from './(bars)/navbar'
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return(
