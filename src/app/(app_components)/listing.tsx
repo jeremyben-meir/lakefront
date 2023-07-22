@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react"
 import { isMobile } from "react-device-detect"
 import * as fetchImages from "../(scripts)/fetchimages"
-import { StorageClass } from "aws-amplify"
 import 'swiper'
 import * as Common from "../Common"
 // import VrboView from "../views/VrboView";
@@ -11,12 +10,11 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/scrollbar"
+import { useWindowSize } from '../(scripts)/sizing'
 register()
 
 interface Props {
   houseDetail: any;
-  Storage: StorageClass;
-  windowSize: any;
 }
 
 interface houseImage {
@@ -48,10 +46,10 @@ const Listing = (props:Props) => {
     swiperRef.current.swiper.slideNext()
   }, [])
 
+  const windowSize = useWindowSize()
   const vrboLink = props.houseDetail.vrboLink
   const imageName = props.houseDetail.img
   const title = props.houseDetail.title
-  const Storage = props.Storage
   const numBedrooms = props.houseDetail.numBedrooms
   const maxCapacity = props.houseDetail.maxCapacity
   const numBathrooms = props.houseDetail.numBathrooms
@@ -60,8 +58,8 @@ const Listing = (props:Props) => {
   const picnum = props.houseDetail.picnum
   // const description = props.houseDetail.description;
 
-  const narrow = props.windowSize.innerWidth < 700
-  const narrow1k = props.windowSize.innerWidth < 1000
+  const narrow = false//windowSize.innerWidth < 700
+  const narrow1k = false//windowSize.innerWidth < 1000
   const gapSize = narrow1k ? "20px" : "30px"
   const imageWidth =
     narrow && listingDivRef.current
@@ -77,7 +75,7 @@ const Listing = (props:Props) => {
 
   useEffect(() => {
     if (!houseImageState.loaded) {
-      fetchImages.main(Storage, "houses/" + imageName, (res) =>
+      fetchImages.main("houses/" + imageName, (res) =>
         setHouseImageState({
           loaded: true,
           images: res,

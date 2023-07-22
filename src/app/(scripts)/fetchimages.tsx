@@ -1,6 +1,13 @@
-import { StorageClass } from "aws-amplify"
+'use server'
+import { Amplify, Storage, Auth } from "aws-amplify"
+import awsconfig from "../../aws-exports"
 
-export const main = async (Storage:StorageClass, imageName:string, setImageCallback:(res:string[])=>void) => {
+Amplify.configure(awsconfig)
+Storage.configure(awsconfig)
+Auth.configure(awsconfig)
+
+
+export const main = async (imageName:string, setImageCallback:(res:string[])=>void) => {
   var img_list: any = await Storage.list(imageName, {
     level: "public",
   })
