@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lakefront-dev-141147-authRole",
+      "UnauthRoleArn": "arn:aws:iam::626970594875:role/amplify-lakefront-dev-141147-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::626970594875:role/amplify-lakefront-dev-141147-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lakefront-dev-141147-deployment",
+      "UnauthRoleName": "amplify-lakefront-dev-141147-unauthRole",
+      "StackName": "amplify-lakefront-dev-141147",
+      "StackId": "arn:aws:cloudformation:us-east-1:626970594875:stack/amplify-lakefront-dev-141147/5f9e9430-28d4-11ee-bb1f-0aa8e396fddd",
+      "AmplifyAppId": "d1q5ltpkylvybr"
+    },
+    "categories": {
+      "auth": {
+        "lakefront9a1c8e0f": {}
+      },
+      "storage": {
+        "lakefrontstorage": {}
+      }
+    }
+  }
+}
