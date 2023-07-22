@@ -1,0 +1,58 @@
+[
+  {
+    "img": "cgs",
+    "title": "Copake General Store",
+    "description": "Modern market with an rich history.",
+    "distance": "2.5 miles",
+    "url": "https://copakegeneralstore.com/",
+    "temp": [
+      {
+        "img": "gym",
+        "title": "Private Gym",
+        "description": "Beautiful gym, shared only with tenants of our homes.",
+        "distance": "On property"
+      },
+      {
+        "img": "tennis",
+        "title": "Tennis Court",
+        "description": "Enjoy a game of tennis, on us.",
+        "distance": "On property"
+      }
+    ]
+  },
+  {
+    "img": "bashbish",
+    "title": "Bash Bish Falls",
+    "description": "Rent a bike, go on a hike, or swim! You can't miss a trip to Bash Bish.",
+    "distance": "6.3 miles",
+    "url": "https://hikethehudsonvalley.com/hikes/bash-bish-falls/"
+  },
+  {
+    "img": "roejan",
+    "title": "Roe Jan Brewing Co.",
+    "description": "Brewery and brewpub, located in an award-winning, mercantile building.",
+    "distance": "8.6 miles",
+    "url": "https://roejanbrewing.com/"
+  },
+  {
+    "img": "catamount",
+    "title": "Catamount Mountain Resort",
+    "description": "Ski in the winter or zipline in the summer.",
+    "distance": "10.9 miles",
+    "url": "https://catamountski.com/"
+  },
+  {
+    "img": "harney",
+    "title": "Harney & Sons",
+    "description": "Visit the rustic tea room, located in the birthplace of Harney & Sons.",
+    "distance": "13.6 miles",
+    "url": "https://www.harney.com/pages/the-millerton-shop"
+  },
+  {
+    "img": "hawthorne",
+    "title": "Hawthorne Valley Farm",
+    "description": "Meet amazing animals and visit the farm store!",
+    "distance": "16.2 miles",
+    "url": "https://farm.hawthornevalley.org/"
+  }
+]
