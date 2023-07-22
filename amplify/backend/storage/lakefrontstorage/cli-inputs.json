@@ -1,6 +1,6 @@
 {
   "resourceName": "lakefrontstorage",
-  "policyUUID": "1bfd65f4",
+  "policyUUID": "f2cb7112",
   "bucketName": "lakefront-storage",
   "storageAccess": "authAndGuest",
   "guestAccess": [

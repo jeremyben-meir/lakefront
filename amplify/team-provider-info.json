@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-lakefront-dev-141147-authRole",
-      "UnauthRoleArn": "arn:aws:iam::626970594875:role/amplify-lakefront-dev-141147-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::626970594875:role/amplify-lakefront-dev-141147-authRole",
+      "AuthRoleName": "amplify-lakefront-dev-152140-authRole",
+      "UnauthRoleArn": "arn:aws:iam::626970594875:role/amplify-lakefront-dev-152140-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::626970594875:role/amplify-lakefront-dev-152140-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-lakefront-dev-141147-deployment",
-      "UnauthRoleName": "amplify-lakefront-dev-141147-unauthRole",
-      "StackName": "amplify-lakefront-dev-141147",
-      "StackId": "arn:aws:cloudformation:us-east-1:626970594875:stack/amplify-lakefront-dev-141147/5f9e9430-28d4-11ee-bb1f-0aa8e396fddd",
-      "AmplifyAppId": "d1q5ltpkylvybr"
+      "DeploymentBucketName": "amplify-lakefront-dev-152140-deployment",
+      "UnauthRoleName": "amplify-lakefront-dev-152140-unauthRole",
+      "StackName": "amplify-lakefront-dev-152140",
+      "StackId": "arn:aws:cloudformation:us-east-1:626970594875:stack/amplify-lakefront-dev-152140/22fd7230-28de-11ee-a825-12b7495bc669",
+      "AmplifyAppId": "d2ai9ouq7xetck"
     },
     "categories": {
       "auth": {
-        "lakefront9a1c8e0f": {}
+        "lakefront983ba947": {}
       },
       "storage": {
         "lakefrontstorage": {}

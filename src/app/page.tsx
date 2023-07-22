@@ -6,6 +6,13 @@ import Listing from './(app_components)/listing'
 import houseJSON from "../assets/HouseInfo.json"
 import { useWindowSize } from './(scripts)/sizing'
 
+import { Amplify, Storage, Auth } from "aws-amplify"
+import awsconfig from "../aws-exports"
+
+Amplify.configure(awsconfig)
+Storage.configure(awsconfig)
+Auth.configure(awsconfig)
+
 export default function Home(props:any) {
   // const narrow1k = props.windowSize.innerWidth < 1000
   // const gapSize = narrow1k ? "20px" : "40px"
@@ -31,7 +38,7 @@ export default function Home(props:any) {
           return (
             <Listing
               key={"key" + index}
-              Storage={props.Storage}
+              Storage={Storage}
               houseDetail={house}
               windowSize={windowSize}
             />
