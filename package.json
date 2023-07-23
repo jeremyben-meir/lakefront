@@ -18,5 +18,9 @@
     "scheduler": "^0.23.0",
     "swiper": "^10.0.4",
     "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.4",
+    "@types/react": "^18.2.15"
   }
 }
