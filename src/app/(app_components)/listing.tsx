@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image"
 import React, { useState, useEffect, useRef, useCallback } from "react"
 import { isMobile } from "react-device-detect"
 import * as fetchImages from "../(scripts)/fetchimages"
@@ -6,9 +7,12 @@ import 'swiper'
 import * as Common from "../Common"
 import { register } from "swiper/element/bundle"
 import "swiper/css"
+import 'swiper/react'
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/scrollbar"
+// import "swiper/swiper.min.css"
+
 import { useWindowSize } from '../(scripts)/sizing'
 register()
 
@@ -31,16 +35,20 @@ const Listing = (props:Props) => {
   const detailDivRef:RefObject = useRef(null)
   const swiperRef:RefObject = useRef(null)
 
+  const [currentPage,setCurrentPage] = useState(0)
+
   const amenityOptions = {
     gapSize: "5px",
   }
 
   const handlePrev = useCallback(() => {
+    setCurrentPage(currentPage=>currentPage-1)
     if (!swiperRef.current) return
     swiperRef.current.swiper.slidePrev()
   }, [])
 
   const handleNext = useCallback(() => {
+    setCurrentPage(currentPage=>currentPage+1)
     if (!swiperRef.current) return
     swiperRef.current.swiper.slideNext()
   }, [])
@@ -72,66 +80,64 @@ const Listing = (props:Props) => {
     images: [],
   })
 
+  const pullImages = async () =>{
+    const result = await fetchImages.main("houses/" + imageName)
+    // console.log(result)
+    setHouseImageState({
+      loaded: true,
+      images: result,
+    })
+  }
+
   useEffect(() => {
     if (!houseImageState.loaded) {
-      fetchImages.main("houses/" + imageName, (res) =>
-        setHouseImageState({
-          loaded: true,
-          images: res,
-        })
-      )
+      pullImages()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const slide = (id: number) => (
-    <swiper-slide
-      style={{
-        display: "flex",
-      }}
-      key={"swiperChild" + id}
-    >
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          height: "100%",
-          overflow: "hidden",
-        }}
-      >
-        {houseImageState.loaded ? (
-          <img
-            alt={"house image " + id}
-            src={houseImageState.images[id]}
-            style={{
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-              boxSizing: "border-box",
-            }}
-          />
-        ) : null}
-      </div>
-    </swiper-slide>
-  )
-
   const Carousel = () => (
     <div style={CarouselStyle(narrow, imageWidth)}>
       <div style={LeftArrowDiv} onClick={handlePrev}>
-        <img
+        <Image
           alt="carousel-left-arrow"
-          style={ArrowImgStyle}
           src="listing/left-arrow.png"
+          style={{width:"100%",height:"100%",objectFit: 'contain',}}
+          fill
         />
       </div>
       <div style={RightArrowDiv} onClick={handleNext}>
-        <img
+        <Image
           alt="carousel-right-arrow"
-          style={ArrowImgStyle}
           src="listing/right-arrow.png"
+          style={{width:"100%",height:"100%",objectFit: 'contain',border:"2px solid red"}}
+          fill
         />
       </div>
-      <swiper-container
+      <div
+        style={{
+          display: "flex",
+          minWidth: "100%",
+          minHeight: "100%",
+          overflow: "hidden",
+          backgroundColor:"#EEEEEE"
+        }}
+      >
+        {houseImageState.loaded ? (
+          <Image
+            alt={"house image"}
+            src={houseImageState.images[currentPage]}
+            fill
+            // style={{
+            //   objectFit: "cover",
+            //   width: "100%",
+            //   height: "100%",
+            //   boxSizing: "border-box",
+            // }}
+          />
+        ) : null}
+      </div>
+      {/* <swiper-container
         cssMode={true}
         pagination={true}
         loop={true}
@@ -143,7 +149,7 @@ const Listing = (props:Props) => {
         {[...Array(picnum)].map((img, id) => {
           return slide(id)
         })}
-      </swiper-container>
+      </swiper-container> */}
     </div>
   )
 
