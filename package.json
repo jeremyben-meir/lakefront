@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aws-amplify": "^5.3.5",
     "js-tokens": "^8.0.1",
     "loose-envify": "^1.4.0",
     "next": "^13.4.12",
