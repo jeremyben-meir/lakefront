@@ -1,6 +1,6 @@
 {
   "name": "lakefront",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,22 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.4.2",
-    "@types/react": "18.2.15",
-    "@types/react-dom": "18.2.7",
-    "aws-crt": "^1.15.22",
-    "browserslist": "^4.21.9",
-    "encoding": "^0.1.13",
-    "eslint": "8.45.0",
-    "eslint-config-next": "13.4.10",
-    "next": "13.4.10",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "5.1.6"
-  },
-  "devDependencies": {
-    "aws-amplify": "^5.3.5",
-    "react-device-detect": "^2.2.3",
-    "swiper": "^10.0.4"
+    "next": "^13.4.12",
+    "swiper": "^10.0.4",
+    "typescript": "^5.1.6"
   }
 }
