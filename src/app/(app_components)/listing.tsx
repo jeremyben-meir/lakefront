@@ -1,10 +1,9 @@
 'use client'
 import React, { useState, useEffect, useRef, useCallback } from "react"
 import { isMobile } from "react-device-detect"
-import * as fetchImages from "../(scripts)/fetchimages"
+// import * as fetchImages from "../(scripts)/fetchimages"
 import 'swiper'
 import * as Common from "../Common"
-// import VrboView from "../views/VrboView";
 import { register } from "swiper/element/bundle"
 import "swiper/css"
 import "swiper/css/navigation"
@@ -75,12 +74,12 @@ const Listing = (props:Props) => {
 
   useEffect(() => {
     if (!houseImageState.loaded) {
-      fetchImages.main("houses/" + imageName, (res) =>
-        setHouseImageState({
-          loaded: true,
-          images: res,
-        })
-      )
+      // fetchImages.main("houses/" + imageName, (res) =>
+      //   setHouseImageState({
+      //     loaded: true,
+      //     images: res,
+      //   })
+      // )
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
